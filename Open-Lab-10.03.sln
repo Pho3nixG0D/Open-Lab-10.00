@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open-Lab-10.00", "Open-Lab-10.00\Open-Lab-10.00.csproj", "{53A9A934-8A70-4E1A-8700-1AACFB7C2802}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open-Lab-10.03", "Open-Lab-10.00\Open-Lab-10.03.csproj", "{53A9A934-8A70-4E1A-8700-1AACFB7C2802}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -14,59 +14,112 @@ namespace Open_Lab_10._00
         private string category;
         private string author;
         private int releaseDate;
-        
 
 
-        public string GetTitle()
+        public string Title
         {
-            return this.title;
+            get { return title; }
+            set { title = value; }
+        }
+  
+        public int Pages
+        {
+            get { return pages; }
+            set { if (value < 0) 
+                { 
+                    pages = 1; 
+                } else
+                {
+                    pages = value;
+                }
+            }
+        }
+
+        public string Category
+        {
+            get { return category; }
+            set { category = value; }
+        }
+
+        public string Author
+        {
+            get { return author; }
+            set { author = value; }
+        }
+
+  
+        public int ReleaseDate
+        {
+            get { return releaseDate; }
+            set
+            {
+                if (1450 <= value || value <= 2021)
+                {
+                    releaseDate = value;
+                }
+                else
+                {
+                    releaseDate = -1;
+                }
+            }
+        }
+
+         public override string ToString()
+        {
+            return String.Format($"{title}\n{pages}\n{category}\n{author}\n{releaseDate}\n");
+        }
+        
+        /*  public string GetTitle()
+        {
+        return this.title;
         }
         public string SetTitle(string title)
         {
-            this.title = title;
-            return title;
-        }
-        public int GetPages(int pages)
-        {
-            return this.pages;
-        }
-        public int SetPages(int pages)
-        {
-            this.pages = pages;
-            return pages;
-        }
-        public string GetCategory(string category)
-        {
-            return this.category;
+        this.title = title;
+        return title;
+        }*/
+
+
+        /* public int GetPages(int pages)
+            {
+                return this.pages;
+            }
+            public int SetPages(int pages)
+            {
+                this.pages = pages;
+                return pages;
+            }*/
+
+        /* public string GetCategory(string category)
+         {
+        return this.category;
         }
         public string SetCategory(string category)
         {
-            this.category = category;
-            return category;
-        }
-        public string GetAuthor(string author)
+        this.category = category;
+        return category;
+     }
+        */
+
+        /*  public string GetAuthor(string author)
         {
-            return this.author;
+        return this.author;
         }
-        public string SetAuthor(string author)
+         public string SetAuthor(string author)
         {
-            this.author = author;
-            return author;
+        this.author = author;
+        return author;
         }
 
-        public int GetReleaseDate(int releaseDate)
+        /*     public int GetReleaseDate(int releaseDate)
         {
-            return this.releaseDate;
+        return this.releaseDate;
         }
         public int SetReleaseDate(int releaseDate)
         {
-            this.releaseDate = releaseDate;
-            return releaseDate;
-        }
+        this.releaseDate = releaseDate;
+        return releaseDate;
+        }*/
 
-        public void WriteAll()
-        {
-            Console.Write($"{title}\n{pages}\n{category}\n{author}\n{releaseDate}\n");
-        }
     }
 }
