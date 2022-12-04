@@ -16,6 +16,32 @@ namespace Open_Lab_10._00
         private int releaseDate;
 
 
+        public Book()
+        {
+            title = "-1";
+            pages = -1;
+            category = "-1";
+            author = "-1";
+            releaseDate = -1;
+        }
+        public Book(string title, int pages)
+        {
+            this.title = title;
+            this.pages = pages;
+            category = "-1";
+            author = "-1";
+            releaseDate = -1;
+        }
+
+        public Book(string title, int pages, string category, string author, int releaseDate)
+        {
+            this.title = title;
+            this.pages = pages;
+            this.category = category;
+            this.author = author;
+            this.releaseDate = releaseDate;
+        }
+
         public string Title
         {
             get { return title; }
