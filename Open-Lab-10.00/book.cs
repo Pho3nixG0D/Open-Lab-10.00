@@ -94,60 +94,7 @@ namespace Open_Lab_10._00
 
         public override string ToString()
         {
-            return String.Format($"{title}\n{pages}\n{category}\n{author}\n{releaseDate}\n");
+            return String.Format($"Title: {title}\nPages: {pages}\nCategory:{category}\nAuthor:{author}\nRelease Date:{releaseDate}\n");
         }
-
-        /*  public string GetTitle()
-        {
-        return this.title;
-        }
-        public string SetTitle(string title)
-        {
-        this.title = title;
-        return title;
-        }*/
-
-
-        /* public int GetPages(int pages)
-            {
-                return this.pages;
-            }
-            public int SetPages(int pages)
-            {
-                this.pages = pages;
-                return pages;
-            }*/
-
-        /* public string GetCategory(string category)
-         {
-        return this.category;
-        }
-        public string SetCategory(string category)
-        {
-        this.category = category;
-        return category;
-     }
-        */
-
-        /*  public string GetAuthor(string author)
-        {
-        return this.author;
-        }
-         public string SetAuthor(string author)
-        {
-        this.author = author;
-        return author;
-        }
-
-        /*     public int GetReleaseDate(int releaseDate)
-        {
-        return this.releaseDate;
-        }
-        public int SetReleaseDate(int releaseDate)
-        {
-        this.releaseDate = releaseDate;
-        return releaseDate;
-        }*/
-
     }
 }

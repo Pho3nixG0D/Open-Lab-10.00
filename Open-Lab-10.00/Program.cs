@@ -10,19 +10,28 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            Book LOTR = new Book();
-            LOTR.Title = "The Lord of the Rings" ;
-            LOTR.Pages = 1178;
-            LOTR.Category = "Heroic Romance";
-            LOTR.Author = "John Ronald Reuel Tolkien";
-            LOTR.ReleaseDate = 1954;
+            //Objects
+            Library schoolLibrary = new Library();
+            Book Py = new Book("Python Zero to Hero",200, Book.categoryList[2],"M. Novak",2016);
+            Book CSharp = new Book("All about C#", 389, Book.categoryList[2], "R. Popper", 2014);
+            Book ComputerScience = new Book("Something about Computer Science", 89, Book.categoryList[2], "Unknown", 2000);
+            Book Networks = new Book("Basics of networks", 126, Book.categoryList[2], "John N.", 2022);
+            
 
-            Book LOTR2 = new Book();
-            Book LOTR3 = new Book( "Lord of The Rings 3" , 416);
-            Book HOBIT = new Book("The Hobbit" , 304, "Fantasy novel", "John Ronald Reuel Tolkien", 1937);
-            HOBIT.Category = Book.categoryList[4];
+            
+            schoolLibrary.BooksList.Add(Py);
+            schoolLibrary.BooksList.Add(CSharp);
+            schoolLibrary.BooksList.Add(ComputerScience);
+            schoolLibrary.BooksList.Add(Networks);
 
-            Console.WriteLine($"{LOTR}\n{LOTR2}\n{LOTR3}\n{HOBIT}\n");
+
+            schoolLibrary.StudentsList.Add("John");
+            schoolLibrary.StudentsList.Add("Poul");
+
+            schoolLibrary.NumberOfStudents = 2;
+            schoolLibrary.NumberOfBooks = 4;
+
+            Console.WriteLine(schoolLibrary.ToString());
 
         }
     }
