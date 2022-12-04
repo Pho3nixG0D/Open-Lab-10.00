@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,10 @@ namespace Open_Lab_10._00
         private string category;
         private string author;
         private int releaseDate;
-
-
+        /// <summary>
+        /// This is List of book categories.
+        /// </summary>
+        public static List<string> categoryList = new List<string>() { "detské", "romantické", "náučné", "sci-fi", "dobrodružné" };
         public Book()
         {
             title = "-1";
@@ -63,7 +66,6 @@ namespace Open_Lab_10._00
 
         public string Category
         {
-            get { return category; }
             set { category = value; }
         }
 
@@ -90,11 +92,11 @@ namespace Open_Lab_10._00
             }
         }
 
-         public override string ToString()
+        public override string ToString()
         {
             return String.Format($"{title}\n{pages}\n{category}\n{author}\n{releaseDate}\n");
         }
-        
+
         /*  public string GetTitle()
         {
         return this.title;
